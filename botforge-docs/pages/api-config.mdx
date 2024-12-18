@@ -1,0 +1,48 @@
+---
+title: "API"
+order: 1
+---
+
+
+# API Config
+
+Our chatbots are designed to integrate seamlessly with APIs to provide dynamic and personalized responses. Here's how the API configuration works:
+
+## Supported Request Type
+
+Currently, our chatbots support only **GET** requests. These requests allow you to fetch data from your APIs using query parameters.
+
+## Query Parameters
+
+You can configure your chatbot to include custom data as query parameters. This makes it easy to create highly interactive and personalized bot experiences.
+
+### Example
+
+Suppose you want your chatbot to fetch product information using an API. You can configure the API URL like this:
+
+```
+https://world.openfoodfacts.org/api/v0/product/:barcode
+```
+
+In this example:
+- **`:barcode`** is a placeholder for a custom parameter.
+- The bot will automatically prompt the user to provide the value for `barcode` when needed.
+
+### Bot Interaction
+
+When a user interacts with the bot, it will detect the missing parameter (e.g., `barcode`) and ask the user to provide it. Once provided, the bot will send the GET request and return the API response.
+
+## When Field
+
+The **`when`** field in the API configuration is crucial for determining when the bot should execute the API request. 
+
+- The bot uses this field to understand the context and decides the optimal time to make the API call.
+- For example, if you set the `when` field to `user_provides_barcode`, the bot will wait until the user provides the `barcode` before executing the API request.
+
+## Intelligent Execution
+
+Thanks to built-in intelligence, the bot evaluates the `when` field dynamically and ensures that API requests are executed at the right moment, minimizing redundant calls and enhancing user experience.
+
+---
+
+For further assistance, refer to the [Getting Started](./getting_started.mdx) guide or explore the [Appearance](./appearance.mdx) section for visual customization.

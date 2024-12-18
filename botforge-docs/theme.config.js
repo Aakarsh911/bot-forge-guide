@@ -1,5 +1,5 @@
 export default {
-    docsRepositoryBase: 'https://github.com/your-repo/docs/',
+    docsRepositoryBase: 'https://github.com/your-repo/docs',
     logo: <span>BotForge Docs</span>,
     project: {
         link: 'https://github.com/your-repo',
@@ -12,17 +12,13 @@ export default {
                 href: '/getting-started', // Path to the corresponding page
             },
             {
-                title: 'Features',
-                items: [
-                    {
-                        title: 'Feature A',
-                        href: '/features/feature-a',
-                    },
-
-                ],
+                title: 'API Config',
+                href: '/api-config', // Path to the API page
             },
-
-
+            {
+                title: 'Credits Usage',
+                href: 'credist-usage',
+            },
         ],
     },
 };
