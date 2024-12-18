@@ -9,7 +9,7 @@ export default {
         items: [
             {
                 title: 'Getting Started',
-                href: '/getting-started', // Path to the corresponding page
+                href: '/', // Path to the corresponding page
             },
             {
                 title: 'API Config',
